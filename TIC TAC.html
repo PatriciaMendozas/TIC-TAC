@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>TIC TAC</title>
+   <link href='https://fonts.googleapis.com/css?family=Indie+Flower' rel='stylesheet' type='text/css'>>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <style>
+        body{background:url("fondo.jpg")}
+        .Cuadrado{
+            width: 100px;height: 100px;text-align: center;
+            font-size: 35pt; font-weight: bold; font-family: "Indie Flower", Arial ; color:#fff;
+        }
+        table td
+        {
+            border:2px solid red;            
+        }
+        table td:first-child
+        {
+            border-left:none;
+        }
+        table td:last-child
+        {
+            border-right:none;
+        }
+        table tr:first-child td
+        {
+            border-top:none;
+        }
+        table tr:last-child td
+        {
+            border-bottom:none;
+        }
+        .btn-default{ color: #fff;background-color: transparent;border-color:red;margin-top: 2%;}
+        .letra{color: #fff; font-size:30pt;padding-top:2%; font-family: "Indie Flower", Arial ;}
+        #message{font-size: 20pt; font-family: "Indie Flower", Arial ;color:red;padding-top:1%;}
+        .michito{margin:5% 0% 5% 37%;}
+        @media(max-width: 700px){
+            .michito{margin:5% 0% 5% 5%;}
+            #message{padding-top:0%;}}
+    </style>
+</head>
+<body onload="startGame();">
+<div class="container text-center">
+    <p class="letra">BIENVENIDOS A MI TIC TAC</p>
+    <div id="message">mensaje</div>
+    <div class="michito">
+        <table border="0" >
+            <tr>
+                <td id="s1" class="Cuadrado" onclick="nextMove(this)"> </td>
+                <td id="s2" class="Cuadrado" onclick="nextMove(this)"> </td>
+                <td id="s3" class="Cuadrado" onclick="nextMove(this)"> </td>
+            </tr>
+            <tr>
+                <td id="s4" class="Cuadrado" onclick="nextMove(this)"> </td>
+                <td id="s5" class="Cuadrado" onclick="nextMove(this)"> </td>
+                <td id="s6" class="Cuadrado" onclick="nextMove(this)"> </td>
+            </tr>
+            <tr>
+                <td id="s7" class="Cuadrado" onclick="nextMove(this)"> </td>
+                <td id="s8" class="Cuadrado" onclick="nextMove(this)"></td>
+                <td id="s9" class="Cuadrado" onclick="nextMove(this)"> </td>
+            </tr>
+        </table>
+    </div>
+    <button class="btn btn-default"  type="button" onclick="startGame();">Nuevo Juego</button>
+</div>
+    <script src="main.js"></script>
+</body>
+</html>
